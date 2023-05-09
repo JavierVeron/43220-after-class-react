@@ -8,10 +8,10 @@ const Header = () => {
         <div className="container-fluid">
             <div className="row bg-body-secondary p-3">
                 <div className="col-md-6">
-                    <a href="http://www.nike.com.ar/airjordan"><img src={AirJordan} alt={"Air Jordan"} width={24} /></a>
+                    <a href="http://www.nike.com.ar/jordan" target={"_blank"} rel={"noreferrer"}><img src={AirJordan} alt={"Air Jordan"} width={24} /></a>
                 </div>
                 <div className="col-md-6 text-end">
-                    <a href="/" className="text-dark text-decoration-none">Buscar Tienda</a> | <a href="#" className="text-dark text-decoration-none">Ayuda</a>
+                    <a href="/" className="text-dark text-decoration-none">Buscar Tienda</a> | <a href="/" className="text-dark text-decoration-none">Ayuda</a>
                 </div>
             </div>
             <div className="row p-3">

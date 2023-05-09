@@ -8,7 +8,7 @@ import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
-    <div className="container-fluid"> 
+    <div> 
       <Header />
       <Carrousel />
       <Destacado />
