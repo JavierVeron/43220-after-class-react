@@ -7,11 +7,11 @@ const Carrousel = () => {
                         <div className="carousel-inner">
                             <div className="carousel-item text-center">
                                 <p>3 cuotas sin interés</p>
-                                <p><a href="/">Ver opciones de pago</a></p>
+                                {/* <p><a href="/">Ver opciones de pago</a></p> */}
                             </div>
                             <div className="carousel-item text-center">
                                 <p>Entregas a todo el país.</p>
-                                <p><a href="/">Ver información de envíos y entregas</a></p>
+                                {/* <p><a href="/">Ver información de envíos y entregas</a></p> */}
                             </div>
                             <div className="carousel-item text-center">
                                 <p>Por fin Nike.com.ar</p>
@@ -28,7 +28,6 @@ const Carrousel = () => {
                 </div>
             </div>
         </div>
-
     )
 }
 
