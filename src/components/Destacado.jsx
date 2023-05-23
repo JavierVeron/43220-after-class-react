@@ -1,5 +1,8 @@
+import Destacado2 from "./Destacado2";
+
 const Destacado = () => {
     return (
+        <>
         <div className="container-fluid mt-5">
             <div className="row">
                 <div className="col text-center">
@@ -9,6 +12,8 @@ const Destacado = () => {
                 </div>
             </div>
         </div>
+        <Destacado2 />
+        </>
     )
 }
 
