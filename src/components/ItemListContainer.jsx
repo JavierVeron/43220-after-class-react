@@ -4,10 +4,13 @@ import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 //import { getFirestore, doc, getDoc } from "firebase/firestore";
 //import { getFirestore, collection, getDocs } from "firebase/firestore";
+//import { getFirestore, collection, getDocs, where, query, addDoc } from "firebase/firestore";
 import { getFirestore, collection, getDocs, where, query } from "firebase/firestore";
+import Loading from "./Loading";
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(true);
     const {id} = useParams();
  
     // Acceder a los productos desde el archivo .json
@@ -59,16 +62,29 @@ const ItemListContainer = () => {
         getDocs(q).then(resultado => {
             if (resultado.size > 0) {
                 setItems(resultado.docs.map(producto => ({id:producto.id, ...producto.data()})));
+                setLoading(false);
             } else {
                 console.error("Error! No se encontraron productos en la colección!");
             }
         });
     }, [id]);
 
+    // Proceso de importación 
+    /* useEffect(() => {
+        const db = getFirestore();
+        const itemsCollection = collection(db, "items");
+
+        productos.forEach(producto => {
+            addDoc(itemsCollection, producto);
+        });
+
+        console.log("Productos cargando en Firestore!");
+    }, []); */
+
     return (
         <div className="container my-5">
             <div className="row">
-                <ItemList productos={items} />
+                {loading ? <Loading /> : <ItemList productos={items} />}
                 {/* <div className="col-md-4 offset-md-2">
                     <img src={items.imagen} alt={items.nombre} className="img-fluid" />
                 </div>
