@@ -38,8 +38,8 @@ const Cart = () => {
                                     <tr key={item.id}>
                                         <td><img src={item.imagen} alt={item.titulo} width={80} /></td>
                                         <td className="align-middle">{item.titulo}</td>
-                                        <td className="align-middle">{item.cantidad} x ${item.precio}</td>
-                                        <td className="align-middle text-center">${item.cantidad * item.precio}</td>
+                                        <td className="align-middle">{item.quantity} x ${item.precio}</td>
+                                        <td className="align-middle text-center">${item.quantity * item.precio}</td>
                                         <td className="align-middle text-end"><button className="btn btn-light" onClick={() => {removeItem(item.id)}} title="Eliminar Producto"><img src={trash} alt="Eliminar Producto" width={24} /></button></td>
                                     </tr>
                                 ))

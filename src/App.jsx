@@ -9,6 +9,7 @@ import ItemListContainer from './components/ItemListContainer';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import CartContextProvider from './components/context/CartContext';
 import Checkout from './components/Checkout';
+import ThankYou from './components/ThankYou';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path={"/destacados"} element={<Destacado />} />
             <Route path={"/cart"} element={<Cart />} />
             <Route path={"/checkout"} element={<Checkout />} />
+            <Route path={"/thankyou/:orderId"} element={<ThankYou />} />
             <Route path={"/*"} element={<Error404 />} />
           </Routes>
           <Footer />

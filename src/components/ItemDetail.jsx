@@ -7,7 +7,6 @@ const ItemDetail = ({producto}) => {
     const [item, setItem] = useState({});
 
     const onAdd = (quantity) => {
-        console.log("Cantidad: " + quantity);
         addItem(item, quantity);
     }
     
